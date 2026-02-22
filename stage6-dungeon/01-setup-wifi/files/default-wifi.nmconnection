@@ -1,0 +1,6 @@
+[wifi]
+ssid=PLACEHOLDER_SSID
+
+[wifi-security]
+key-mgmt=wpa-psk
+psk=PLACEHOLDER_PASSWORD
