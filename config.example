@@ -1,0 +1,36 @@
+# Release Name in /etc/issue.txt
+PI_GEN_RELEASE="HSBI Produs"
+
+# Image option
+RELEASE=trixie
+ARCH=arm64
+IMG_NAME=dungeon-$RELEASE-$ARCH
+DEPLOY_COMPRESSION=none # output .img file without putting it into zip
+
+STAGE_LIST="stage0 stage1 stage2 stage3 stage4 stage6-dungeon"
+
+
+# Locale settings
+LOCALE_DEFAULT=de_DE.UTF-8
+KEYBOARD_KEYMAP=de
+KEYBOARD_LAYOUT=""
+TIMEZONE_DEFAULT=Europe/Berlin
+
+
+# WiFi Settings/Networking
+WPA_COUNTRY=DE
+WPA_ESSID=workshop-pinet
+WPA_PASSWORD=********
+
+TARGET_HOSTNAME=workshop-pi
+
+
+# User generation (keep user with password)
+FIRST_USER_NAME=workshop
+FIRST_USER_PASS=********
+DISABLE_FIRST_BOOT_USER_RENAME=1
+ENABLE_AUTO_LOGIN=1
+
+
+# Disable not needed cloud-init
+ENABLE_CLOUD_INIT=0
