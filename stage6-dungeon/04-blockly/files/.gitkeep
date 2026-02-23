@@ -1,0 +1,3 @@
+Blockly_server.bin: Binary to run Blockly frontend server and start jar.
+blockly.jar:        Blockly jar itself
+index.html:         index build by frontend used by frontend server
