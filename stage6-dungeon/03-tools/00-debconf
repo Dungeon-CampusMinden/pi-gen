@@ -1,0 +1,2 @@
+# add microsoft repo for apt (fixes interactive installation)
+code code/add-microsoft-repo boolean true
