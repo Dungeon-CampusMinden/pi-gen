@@ -1,10 +1,6 @@
 # Create Dungeon Image
 1. Clone Repo
 1. Copy `config.example` to `config` and make necessary changes (e.g. WiFi password and user password)
-1. For now: add missing files to `./stage6-dungeon/04-blockly/files`:
-    - **Blockly_server.bin:** Binary to run Blockly frontend server and start jar
-    - **blockly.jar:** Blockly jar itself
-    - **index.html:** index build by frontend used by frontend server
 1. Build:
     - Run `./build.sh` (as root) to build local if on debian system (after installing all dependencies, see below)
     - or run `./build-docker.sh` (as root) to build in docker container (should also work on Mac)
