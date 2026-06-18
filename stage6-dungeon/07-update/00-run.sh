@@ -8,8 +8,9 @@ git -C /home/${FIRST_USER_NAME}/Desktop/Workshop/source stash
 git -C /home/${FIRST_USER_NAME}/Desktop/Workshop/source pull
 
 # Update Blockly jars
-curl -L -o "/home/${FIRST_USER_NAME}/Desktop/Workshop/Blockly/Blockly-web.jar" "https://github.com/Dungeon-CampusMinden/Dungeon/releases/latest/download/Blockly-web.jar"
-curl -L -o "/home/${FIRST_USER_NAME}/Desktop/Workshop/Blockly/Blockly-desktop.jar" "https://github.com/Dungeon-CampusMinden/Dungeon/releases/latest/download/Blockly-desktop.jar"
+latest_tag=$(curl -fsSL "https://api.github.com/repos/Dungeon-CampusMinden/Dungeon/releases" | jq -r '.[] | select(.body | test("Blockly|Dungeon"; "i")) | .tag_name' | head -n1)
+curl -L -o "/home/${FIRST_USER_NAME}/Desktop/Workshop/Blockly/Blockly-web.jar" "https://github.com/Dungeon-CampusMinden/Dungeon/releases/download/${latest_tag}/Blockly-web.jar"
+curl -L -o "/home/${FIRST_USER_NAME}/Desktop/Workshop/Blockly/Blockly-desktop.jar" "https://github.com/Dungeon-CampusMinden/Dungeon/releases/download/${latest_tag}/Blockly-desktop.jar"
 EOF
 
 chown 1000:1000 "${ROOTFS_DIR}/home/${FIRST_USER_NAME}/Desktop/Workshop/update.sh"
