@@ -3,7 +3,7 @@
 install -m 755 -o 1000 -g 1000 -d "${ROOTFS_DIR}/home/${FIRST_USER_NAME}/Desktop/Workshop/Blockly/"
 
 latest_tag=$(curl -fsSL "https://api.github.com/repos/Dungeon-CampusMinden/Dungeon/releases" | jq -r '.[] | select(.body | test("Blockly|Dungeon"; "i")) | .tag_name' | head -n1)
-curl -L -o "${ROOTFS_DIR}/home/${FIRST_USER_NAME}/Desktop/Workshop/Blockly/Blockly-web.jar" "https://github.com/Dungeon-CampusMinden/Dungeon/releases/download/${latest_tag}/Blockly-web.jar"
+curl -L -o "${ROOTFS_DIR}/home/${FIRST_USER_NAME}/Desktop/Workshop/Blockly/Blockly-web.jar" "https://github.com/Dungeon-CampusMinden/PRODUS/releases/download/${latest_tag}/Blockly-web.jar"
 chown 1000:1000 "${ROOTFS_DIR}/home/${FIRST_USER_NAME}/Desktop/Workshop/Blockly/Blockly-web.jar"
 
 cat > "${ROOTFS_DIR}/home/${FIRST_USER_NAME}/Desktop/blockly-dungeon.desktop" <<- EOF

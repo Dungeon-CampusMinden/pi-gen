@@ -5,7 +5,7 @@ touch "${ROOTFS_DIR}/home/${FIRST_USER_NAME}/Desktop/Workshop/Blockly/levels/lev
 chown 1000:1000 "${ROOTFS_DIR}/home/${FIRST_USER_NAME}/Desktop/Workshop/Blockly/levels/level1.java"
 
 latest_tag=$(curl -fsSL "https://api.github.com/repos/Dungeon-CampusMinden/Dungeon/releases" | jq -r '.[] | select(.body | test("Blockly|Dungeon"; "i")) | .tag_name' | head -n1)
-curl -L -o "${ROOTFS_DIR}/home/${FIRST_USER_NAME}/Desktop/Workshop/Blockly/Blockly-desktop.jar" "https://github.com/Dungeon-CampusMinden/Dungeon/releases/download/${latest_tag}/Blockly-desktop.jar"
+curl -L -o "${ROOTFS_DIR}/home/${FIRST_USER_NAME}/Desktop/Workshop/Blockly/Blockly-desktop.jar" "https://github.com/Dungeon-CampusMinden/PRODUS/releases/download/${latest_tag}/Blockly-desktop.jar"
 chown 1000:1000 "${ROOTFS_DIR}/home/${FIRST_USER_NAME}/Desktop/Workshop/Blockly/Blockly-desktop.jar"
 
 cat > "${ROOTFS_DIR}/home/${FIRST_USER_NAME}/Desktop/java-dungeon.desktop" <<- EOF
